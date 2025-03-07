@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import "../../../styles/customStyles.css";
 
 // Image sources for the carousel
 const images = [
@@ -39,7 +40,8 @@ const QualityProducts = () => {
   // Function to handle movement while dragging
   const handleMove = (e) => {
     if (!isDragging.current) return;
-    const moveX = (e.touches ? e.touches[0].clientX : e.clientX) - startX.current;
+    const moveX =
+      (e.touches ? e.touches[0].clientX : e.clientX) - startX.current;
 
     // If swipe is detected, update the index accordingly
     if (moveX > 50) {
@@ -58,7 +60,7 @@ const QualityProducts = () => {
 
   return (
     <div
-      className="relative flex flex-col items-center text-center py-10 w-full overflow-hidden"
+      className="relative flex flex-col items-center text-center py-10 w-full overflow-hidden md:mt-20"
       onTouchStart={handleStart}
       onTouchMove={handleMove}
       onTouchEnd={handleEnd}
@@ -68,9 +70,15 @@ const QualityProducts = () => {
       onMouseLeave={handleEnd}
     >
       {/* Section title */}
-      <h2 className="text-2xl leading-tight">Quality Products</h2>
-      <p className="text-gray-600 max-w-xl mt-2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <h2 className="text-2xl md:text-6xl">Quality Products</h2>
+
+      <p className="text-gray-600 max-w-4xl mt-2 text-xs md:text-2xl px-15 md:px-4">
+        {" "}
+        {/* Added px-4 for mobile view */}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
       </p>
 
       {/* Image container with three images: left, center, and right */}
@@ -86,8 +94,7 @@ const QualityProducts = () => {
           />
         </div>
 
-        {/* Center (Main) Image */}
-        <motion.div className="relative w-2/5 sm:w-1/5 h-[200px] sm:h-[500px] shadow-lg z-10 cursor-pointer">
+        <motion.div className="relative w-2/5  lg:w-5/20 h-[200px] sm:h-[500px] shadow-lg z-10 cursor-pointer">
           <Image
             src={images[currentIndex]}
             alt="Current Image"

@@ -62,8 +62,14 @@ const Banner = () => {
         {hasInteracted && (
           <motion.div
             key={index}
-            initial={{ clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)", opacity: 0 }}
-            animate={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", opacity: 1 }}
+            initial={{
+              clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)",
+              opacity: 0,
+            }}
+            animate={{
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              opacity: 1,
+            }}
             exit={{ opacity: 0 }}
             transition={{ duration: 2, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full"
@@ -81,8 +87,11 @@ const Banner = () => {
 
       {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center md:items-start sm:items-center text-white px-6 md:px-20">
-        <p className="text-sm md:text-lg uppercase tracking-wide">Welcome To TenTwenty Farms</p>
-        <h1 className="text-4xl md:text-6xl leading-tight">From Our Farms <br /> To Your Hands</h1>
+        <p className="text-xs md:text-lg ">Welcome To TenTwenty Farms</p>
+        <h1 className="text-4xl md:text-6xl">
+          From Our <br /> Farms <br />{" "}
+          <p className="text-nowrap">To your hands</p>
+        </h1>
       </div>
 
       {/* Next Image Preview and Navigation */}
@@ -94,7 +103,7 @@ const Banner = () => {
           onClick={handleNext}
         >
           <motion.div
-            className="absolute top-0 left-0 w-full h-full border-4 border-white"
+            className="absolute top-0 left-0 w-full h-full border-5 border-white"
             variants={borderAnimation}
             initial="initial"
             animate="animate"
@@ -106,14 +115,19 @@ const Banner = () => {
               layout="fill"
               objectFit="cover"
             />
-            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xs">Next</p>
+            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-base">
+              Next
+            </p>
           </div>
         </div>
 
         {/* Image Counter */}
         <div className="text-white flex items-center space-x-2 text-sm">
           <span>{String(index + 1).padStart(2, "0")}</span>
-          <div className="w-20 border-t" style={{ borderColor: "#EEF4F9" }}></div>
+          <div
+            className="w-20 border-t"
+            style={{ borderColor: "#EEF4F9" }}
+          ></div>
           <span>04</span>
         </div>
       </div>
