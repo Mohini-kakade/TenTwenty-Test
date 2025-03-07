@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tentwenty-farms.vercel.app
+
+# Sitemaps
+Sitemap: https://tentwenty-farms.vercel.app/sitemap.xml
