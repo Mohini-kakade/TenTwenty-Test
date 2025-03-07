@@ -102,12 +102,20 @@ const Banner = () => {
           style={{ border: "1px solid rgba(238, 244, 249, 0.2)" }}
           onClick={handleNext}
         >
-          <motion.div
+          {/* <motion.div
             className="absolute top-0 left-0 w-full h-full border-5 border-white"
             variants={borderAnimation}
             initial="initial"
             animate="animate"
-          ></motion.div>
+          ></motion.div> */}
+          <motion.div
+  key={index} // This forces the animation to restart when index changes
+  className="absolute top-0 left-0 w-full h-full border-5 border-white"
+  variants={borderAnimation}
+  initial="initial"
+  animate="animate"
+/>
+
           <div className="relative w-20 h-20">
             <Image
               src={images[(index + 1) % images.length]}

@@ -33,8 +33,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center"
-          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden flex items-center z-50"
+          onClick={console.log("clicked")}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
