@@ -86,10 +86,10 @@ const Banner = () => {
       </div>
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-center md:items-start sm:items-center text-white px-6 md:px-20">
-        <p className="text-xs md:text-lg ">Welcome To TenTwenty Farms</p>
-        <h1 className="text-4xl md:text-6xl">
-          From Our <br /> Farms <br />{" "}
+      <div className="absolute inset-0 flex flex-col justify-center md:items-start sm:items-center text-white px-6 md:px-25 mt-5">
+        <p className="text-xs md:text-lg mb-5">Welcome To TenTwenty Farms</p>
+        <h1 className="text-4xl md:text-6xl font-normal">
+          From Our Farms <br></br>{" "}
           <p className="text-nowrap">To your hands</p>
         </h1>
       </div>

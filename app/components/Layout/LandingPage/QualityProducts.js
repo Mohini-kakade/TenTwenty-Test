@@ -70,9 +70,9 @@ const QualityProducts = () => {
       onMouseLeave={handleEnd}
     >
       {/* Section title */}
-      <h2 className="text-2xl md:text-6xl">Quality Products</h2>
+      <h2 className="text-2xl md:text-6xl md:mt-8">Quality Products</h2>
 
-      <p className="text-gray-600 max-w-4xl mt-2 text-xs md:text-2xl px-15 md:px-4 md:mb-20">
+      <p className="text-gray-500 max-w-4xl mt-2 text-xs md:text-2xl px-15 md:px-4 md:mb-20 md:mt-12">
         {" "}
         {/* Added px-4 for mobile view */}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -100,7 +100,7 @@ const QualityProducts = () => {
             alt="Current Image"
             width={500}
             height={600}
-            className="object-cover w-full h-full"
+            className="object-cover h-full"
           />
         </motion.div>
 
@@ -118,15 +118,15 @@ const QualityProducts = () => {
 
       {/* Client details corresponding to the current image */}
       <motion.div
-        className="mt-4"
+        className="mt-4 mb-20"
         key={currentIndex}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="font-semibold">{clients[currentIndex].name}</h3>
-        <p className="text-gray-500">{clients[currentIndex].location}</p>
+        <h3 className="font-normal text-3xl md:text-4xl mt-10 mb-5">{clients[currentIndex].name}</h3>
+        <p className="text-gray-500 font-normal text-1xl md:text-2xl">{clients[currentIndex].location}</p>
       </motion.div>
     </div>
   );
