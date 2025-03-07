@@ -7,7 +7,6 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md p-3">
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        {/* Left - Nav Links */}
         <div className="hidden md:flex space-x-6">
           <a href="#" className="hover:text-gray-600">
             About
@@ -26,12 +25,10 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Right - Contact Button */}
         <button className="border border-black px-5 py-1 flex items-center gap-2 hover:bg-gray-100">
           Contact us &nbsp; →
         </button>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden flex items-center z-50"
           onClick={console.log("clicked")}
@@ -40,7 +37,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 pb-4">
           <a href="#" className="hover:text-gray-600">

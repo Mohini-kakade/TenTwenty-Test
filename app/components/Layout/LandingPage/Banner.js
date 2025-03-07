@@ -4,7 +4,6 @@ import Image from "next/image";
 import Navbar from "../../Navbar/Navbar";
 import { motion } from "framer-motion";
 
-// List of images used for the banner
 const images = [
   "/Images/tentwenty-farms1.jpeg",
   "/Images/tentwenty-farms2.png",
@@ -12,7 +11,6 @@ const images = [
   "/Images/tentwenty-farms4.png",
 ];
 
-// Border animation for the next image preview
 const borderAnimation = {
   initial: { clipPath: "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)" },
   animate: {
@@ -32,7 +30,6 @@ const Banner = () => {
   const [prevIndex, setPrevIndex] = useState(0); // Previous image index
   const [hasInteracted, setHasInteracted] = useState(false); // Tracks if user has interacted
 
-  // Function to go to the next image
   const handleNext = () => {
     setPrevIndex(index);
     setIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -41,14 +38,11 @@ const Banner = () => {
 
   return (
     <div className="relative w-full h-screen">
-      {/* Navbar */}
       <div className="p-0 sm:px-4 sm:pt-4">
         <Navbar />
       </div>
 
-      {/* Background Image Section */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        {/* Previous Image */}
         <Image
           src={images[prevIndex]}
           alt="Previous Image"
@@ -58,7 +52,6 @@ const Banner = () => {
           className="absolute inset-0 w-full h-full"
         />
 
-        {/* Fading transition effect when user interacts */}
         {hasInteracted && (
           <motion.div
             key={index}
@@ -85,7 +78,6 @@ const Banner = () => {
         )}
       </div>
 
-      {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center md:items-start sm:items-center text-white px-6 md:px-25 mt-5">
         <p className="text-xs md:text-lg mb-5">Welcome To TenTwenty Farms</p>
         <h1 className="text-4xl md:text-6xl font-normal">
@@ -93,22 +85,14 @@ const Banner = () => {
         </h1>
       </div>
 
-      {/* Next Image Preview and Navigation */}
       <div className="absolute bottom-10 left-8 md:left-23 flex items-center space-x-6">
-        {/* Next Image Thumbnail with Animation */}
         <div
           className="relative flex items-center justify-center p-6 cursor-pointer"
           style={{ border: "1px solid rgba(238, 244, 249, 0.2)" }}
           onClick={handleNext}
         >
-          {/* <motion.div
-            className="absolute top-0 left-0 w-full h-full border-5 border-white"
-            variants={borderAnimation}
-            initial="initial"
-            animate="animate"
-          ></motion.div> */}
           <motion.div
-            key={index} // This forces the animation to restart when index changes
+            key={index}
             className="absolute top-0 left-0 w-full h-full border-5 border-white"
             variants={borderAnimation}
             initial="initial"
@@ -128,7 +112,6 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Image Counter */}
         <div className="text-white flex items-center space-x-2 text-sm">
           <span>{String(index + 1).padStart(2, "0")}</span>
           <div
