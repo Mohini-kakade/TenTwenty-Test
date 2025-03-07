@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 // List of images used for the banner
 const images = [
-  "/Images/image1.jpeg",
-  "/Images/image2.png",
-  "/Images/image3.png",
-  "/Images/image4.png",
+  "/Images/tentwenty-farms1.jpeg",
+  "/Images/tentwenty-farms2.png",
+  "/Images/tentwenty-farms3.png",
+  "/Images/tentwenty-farms4.png",
 ];
 
 // Border animation for the next image preview
@@ -89,8 +89,7 @@ const Banner = () => {
       <div className="absolute inset-0 flex flex-col justify-center md:items-start sm:items-center text-white px-6 md:px-25 mt-5">
         <p className="text-xs md:text-lg mb-5">Welcome To TenTwenty Farms</p>
         <h1 className="text-4xl md:text-6xl font-normal">
-          From Our Farms <br></br>{" "}
-          <p className="text-nowrap">To your hands</p>
+          From Our Farms <br></br> <p className="text-nowrap">To your hands</p>
         </h1>
       </div>
 
@@ -109,12 +108,12 @@ const Banner = () => {
             animate="animate"
           ></motion.div> */}
           <motion.div
-  key={index} // This forces the animation to restart when index changes
-  className="absolute top-0 left-0 w-full h-full border-5 border-white"
-  variants={borderAnimation}
-  initial="initial"
-  animate="animate"
-/>
+            key={index} // This forces the animation to restart when index changes
+            className="absolute top-0 left-0 w-full h-full border-5 border-white"
+            variants={borderAnimation}
+            initial="initial"
+            animate="animate"
+          />
 
           <div className="relative w-20 h-20">
             <Image

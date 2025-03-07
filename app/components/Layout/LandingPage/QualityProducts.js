@@ -6,10 +6,10 @@ import "../../../styles/customStyles.css";
 
 // Image sources for the carousel
 const images = [
-  "/Images/image1.jpeg",
-  "/Images/image2.png",
-  "/Images/image3.png",
-  "/Images/image4.png",
+  "/Images/tentwenty-farms1.jpeg",
+  "/Images/tentwenty-farms2.png",
+  "/Images/tentwenty-farms3.png",
+  "/Images/tentwenty-farms4.png",
 ];
 
 // Client details to be displayed along with images
@@ -125,8 +125,12 @@ const QualityProducts = () => {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="font-normal text-3xl md:text-4xl mt-10 mb-5">{clients[currentIndex].name}</h3>
-        <p className="text-gray-500 font-normal text-1xl md:text-2xl">{clients[currentIndex].location}</p>
+        <h3 className="font-normal text-3xl md:text-4xl mt-10 mb-5">
+          {clients[currentIndex].name}
+        </h3>
+        <p className="text-gray-500 font-normal text-1xl md:text-2xl">
+          {clients[currentIndex].location}
+        </p>
       </motion.div>
     </div>
   );
