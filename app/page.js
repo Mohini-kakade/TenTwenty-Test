@@ -1,16 +1,12 @@
-export const metadata = {
-    title: "Next.js 13 Starter | Coffee",
-    description:
-        "A Next.js 13 starter project built without using create-next-app.",
-};
+import Banner from "./components/Layout/LandingPage/Banner";
+import QualityProducts from "./components/Layout/LandingPage/QualityProducts";
+export default function Home() {
+  return(
+    <>
+   <Banner/>
+    <QualityProducts/>
+    </>
+  )
 
-
-const Page = () => {
-    return (
-        <>
-            <h1>Hello, Next.js! This is Coffee.</h1>
-        </>
-    );
-};
-
-export default Page;
+  ;
+}
