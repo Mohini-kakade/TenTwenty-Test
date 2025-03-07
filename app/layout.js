@@ -26,7 +26,7 @@ export const metadata = {
     type: "website",
   },
   other: {
-    "google-site-verification": "your-google-verification-code",
+    "google-site-verification": "googleb86070f67c56b543",
   },
 };
 

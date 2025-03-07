@@ -72,7 +72,7 @@ const QualityProducts = () => {
       {/* Section title */}
       <h2 className="text-2xl md:text-6xl">Quality Products</h2>
 
-      <p className="text-gray-600 max-w-4xl mt-2 text-xs md:text-2xl px-15 md:px-4 ">
+      <p className="text-gray-600 max-w-4xl mt-2 text-xs md:text-2xl px-15 md:px-4 md:mb-20">
         {" "}
         {/* Added px-4 for mobile view */}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
